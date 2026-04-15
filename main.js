@@ -10,7 +10,7 @@ const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$
 
 elForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
     const emailValue = elForm['email'].value.trim();
     const passwordValue = elForm['password'].value.trim();
 
@@ -20,7 +20,9 @@ elForm.addEventListener('submit', (e) => {
 
     if (!passwordRegex.test(passwordValue)) return alert(`Iltimos, to'g'ri parolni kiriting`);
 
-    console.log(elEmail, elPassword); 
+    alert(`Siz muvaffaqiyatli ro'yxatdan o'tdingiz!`);
+    elEmail.value = '';
+    elPassword.value = '';
 });
 
 
